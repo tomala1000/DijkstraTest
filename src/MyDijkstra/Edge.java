@@ -26,8 +26,17 @@ public class Edge {
 
         if (other == vertices[0]) {
             return vertices[1];
-        } else return vertices[0];
+        } else if (other == vertices[1]){
+            return vertices[0];
+        } else {
+            throw new IllegalArgumentException("called #other method with Vertex that do not belong to the edge.");
+        }
+    };
 
+    @Override
+    public String toString() {
+        return "Edge " +
+                "value= " + value;
     }
 
     ;

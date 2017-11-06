@@ -1,14 +1,32 @@
 package MyDijkstra;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Graph {
 
-    private ArrayList vertexList;
+    private List<Vertex> vertices;
 
-    public Graph (ArrayList vertexList){
-        this.vertexList = vertexList;
+    public Graph(List vertices) {
+        if (vertices == null) {
+            throw new IllegalArgumentException("Vertices cannot be null");
+        }
+        this.vertices = vertices;
+    }
 
-    };
+    public List<Vertex> getVertices() {
+        return vertices;
+    }
 
+    public List vertices(){
+        return vertices;
 }
+
+
+
+
+    }
+
+    ;
+
+
